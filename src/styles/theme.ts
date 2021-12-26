@@ -47,4 +47,4 @@ export const theme = {
     modal: 40,
     alwaysOnTop: 50
   }
-}
+} as const
