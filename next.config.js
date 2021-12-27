@@ -5,6 +5,10 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = withPWA({
   reactStrictMode: true,
+  swcMinify: true,
+  experimental: {
+    styledComponents: true
+  },
   pwa: {
     dest: 'public',
     disable: !isProd
