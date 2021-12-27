@@ -2,10 +2,11 @@ import * as S from './styles'
 
 export type LogoProps = {
   color?: 'white' | 'black'
+  size?: 'medium' | 'large'
 }
 
-export const Logo = ({ color = 'white' }: LogoProps) => (
-  <S.Wrapper color={color}>
+export const Logo = ({ color = 'white', size = 'medium' }: LogoProps) => (
+  <S.Wrapper color={color} size={size}>
     <svg
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
