@@ -9,17 +9,17 @@ import * as S from './styles'
 export const Menu = () => (
   <S.Wrapper>
     <S.IconWrapper>
-      <MenuIcon />
+      <MenuIcon aria-label="Open menu" />
     </S.IconWrapper>
     <S.LogoWrapper>
       <Logo hideOnMobile />
     </S.LogoWrapper>
     <S.MenuGroup>
       <S.IconWrapper>
-        <SearchIcon />
+        <SearchIcon aria-label="Search games" />
       </S.IconWrapper>
       <S.IconWrapper>
-        <ShoppingCartIcon />
+        <ShoppingCartIcon aria-label="Open shopping cart" />
       </S.IconWrapper>
     </S.MenuGroup>
   </S.Wrapper>
