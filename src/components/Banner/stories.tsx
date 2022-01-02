@@ -12,9 +12,30 @@ export default {
     buttonLabel: 'Buy now',
     buttonLink: '/games/defy-death'
   },
+  argTypes: {
+    ribbon: {
+      type: 'string'
+    }
+  },
   parameters: {
     layout: 'fullscreen'
   }
 } as Meta
 
-export const Basic: Story<BannerProps> = args => <Banner {...args} />
+export const Basic: Story<BannerProps> = args => (
+  <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
+    <Banner {...args} />
+  </div>
+)
+
+export const WithRibbon: Story<BannerProps> = args => (
+  <div style={{ maxWidth: '104rem', margin: '0 auto' }}>
+    <Banner {...args} />
+  </div>
+)
+
+WithRibbon.args = {
+  ribbon: '20% OFF',
+  ribbonSize: 'small',
+  ribbonColor: 'primary'
+}
