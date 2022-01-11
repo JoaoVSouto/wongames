@@ -9,7 +9,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>React Avançado - Boilerplate</title>
+        <title>Won Games</title>
 
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
@@ -17,7 +17,7 @@ function App({ Component, pageProps }: AppProps) {
 
         <meta
           name="description"
-          content="A simple project starter to work with Typescript, React, NextJS and styled-components"
+          content="The best game store in the world. Buy games for your PC, PS4, Xbox One, Nintendo Switch, and more."
         />
       </Head>
 
