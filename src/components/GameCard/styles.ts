@@ -123,6 +123,7 @@ export const Price = styled.div<PriceProps>`
     align-items: center;
     font-weight: ${theme.font.bold};
     height: 3rem;
+    white-space: nowrap;
 
     ${!isPromotional && priceModifiers.default(theme)}
     ${isPromotional && priceModifiers.promotional(theme)}

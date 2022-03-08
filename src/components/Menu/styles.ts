@@ -92,7 +92,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     pointer-events: ${isOpen ? 'all' : 'none'};
 
     background-color: ${theme.colors.white};
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -100,6 +100,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     overflow: hidden;
     height: 100vh;
     transition: opacity 0.3s ease-in-out;
+    z-index: ${theme.layers.menu};
 
     display: flex;
     flex-direction: column;
