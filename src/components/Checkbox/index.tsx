@@ -12,7 +12,7 @@ export const Checkbox = ({
   labelColor = 'white'
 }: CheckboxProps) => (
   <S.Wrapper>
-    <input id={labelFor} type="checkbox" />
+    <S.Input id={labelFor} type="checkbox" />
     {label && (
       <S.Label htmlFor={labelFor} labelColor={labelColor}>
         {label}

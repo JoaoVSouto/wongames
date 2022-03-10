@@ -47,5 +47,9 @@ export const theme = {
     overlay: 30,
     modal: 40,
     alwaysOnTop: 50
+  },
+  transition: {
+    default: '0.3s ease-in-out',
+    fast: '0.1s ease-in-out'
   }
 } as const
