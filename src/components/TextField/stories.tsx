@@ -14,7 +14,8 @@ export default {
   },
   argTypes: {
     onInput: { action: 'changed' },
-    icon: { type: 'symbol' }
+    icon: { type: 'symbol' },
+    disabled: { type: 'boolean' }
   }
 } as Meta
 

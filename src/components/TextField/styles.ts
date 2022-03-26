@@ -1,8 +1,6 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 
 import type { TextFieldProps } from '.'
-
-export const Wrapper = styled.div``
 
 export const InputWrapper = styled.div`
   ${({ theme }) => css`
@@ -58,5 +56,30 @@ export const Icon = styled.div<IconProps>`
     > svg {
       width: 100%;
     }
+  `}
+`
+
+type WrapperProps = {
+  disabled: boolean
+}
+
+const wrapperModifiers = {
+  disabled: (theme: DefaultTheme) => css`
+    ${Label},
+    ${Input},
+    ${Icon} {
+      cursor: not-allowed;
+      color: ${theme.colors.gray};
+
+      &::placeholder {
+        color: currentColor;
+      }
+    }
+  `
+}
+
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ theme, disabled }) => css`
+    ${disabled && wrapperModifiers.disabled(theme)}
   `}
 `

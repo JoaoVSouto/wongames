@@ -17,6 +17,7 @@ export const TextField = ({
   initialValue = '',
   icon,
   iconPosition = 'left',
+  disabled = false,
   onInput,
   ...rest
 }: TextFieldProps) => {
@@ -30,7 +31,7 @@ export const TextField = ({
   }
 
   return (
-    <S.Wrapper>
+    <S.Wrapper disabled={disabled}>
       {label && <S.Label htmlFor={labelFor}>{label}</S.Label>}
       <S.InputWrapper>
         {icon && <S.Icon position={iconPosition}>{icon}</S.Icon>}
@@ -40,6 +41,7 @@ export const TextField = ({
           onChange={onChange}
           value={value}
           iconPosition={iconPosition}
+          disabled={disabled}
           {...rest}
         />
       </S.InputWrapper>
