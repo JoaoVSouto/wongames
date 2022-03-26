@@ -79,6 +79,23 @@ describe('<TextField />', () => {
     expect(onInput).not.toHaveBeenCalled()
   })
 
+  it('should render with error', () => {
+    const errorMessage = 'This is an error'
+
+    const { container } = renderWithTheme(
+      <TextField
+        icon={<Email data-testid="icon" />}
+        label="TextField"
+        labelFor="text-field"
+        error={errorMessage}
+      />
+    )
+
+    expect(screen.getByText(errorMessage)).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
   it('should be accessible by tab', () => {
     renderWithTheme(<TextField label="TextField" labelFor="textfield" />)
 
