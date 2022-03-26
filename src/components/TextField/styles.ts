@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 
+import type { TextFieldProps } from '.'
+
 export const Wrapper = styled.div``
 
 export const InputWrapper = styled.div`
@@ -16,12 +18,17 @@ export const InputWrapper = styled.div`
   `}
 `
 
-export const Input = styled.input`
-  ${({ theme }) => css`
+type InputProps = {
+  iconPosition: NonNullable<TextFieldProps['iconPosition']>
+}
+
+export const Input = styled.input<InputProps>`
+  ${({ theme, iconPosition }) => css`
     color: ${theme.colors.black};
     font-family: ${theme.font.family};
     font-size: ${theme.font.sizes.medium};
-    padding: ${theme.spacings.xxsmall};
+    padding: ${theme.spacings.xxsmall} 0;
+    padding-${iconPosition}: ${theme.spacings.xsmall};
     background-color: transparent;
     border: 0;
     outline: none;
@@ -37,11 +44,16 @@ export const Label = styled.label`
   `}
 `
 
-export const Icon = styled.div`
-  ${({ theme }) => css`
+type IconProps = {
+  position: TextFieldProps['iconPosition']
+}
+
+export const Icon = styled.div<IconProps>`
+  ${({ theme, position }) => css`
     display: flex;
     width: 2.2rem;
     color: ${theme.colors.gray};
+    order: ${position === 'right' ? 1 : 0};
 
     > svg {
       width: 100%;
