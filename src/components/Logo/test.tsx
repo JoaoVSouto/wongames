@@ -6,6 +6,12 @@ import { theme } from 'styles/theme'
 import { Logo } from '.'
 
 describe('<Logo />', () => {
+  it('should render the logo with passed id', () => {
+    const { container } = renderWithTheme(<Logo id="myId" />)
+
+    expect(container.querySelector('#a_myId')).toBeInTheDocument()
+  })
+
   it('should render a white label by default', () => {
     renderWithTheme(<Logo />)
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveStyle({
