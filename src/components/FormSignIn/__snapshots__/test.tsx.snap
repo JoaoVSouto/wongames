@@ -92,20 +92,6 @@ exports[`<FormSignIn /> should render the form 1`] = `
   margin: 3.2rem auto 1.6rem;
 }
 
-.c6 {
-  display: block;
-  font-size: 1.4rem;
-  color: #030517;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-align: right;
-}
-
-.c6:hover,
-.c6:focus {
-  color: #0f1971;
-}
-
 .c9 {
   font-size: 1.4rem;
   color: #030517;
@@ -125,6 +111,20 @@ exports[`<FormSignIn /> should render the form 1`] = `
 .c9 a:focus {
   color: #29b3a3;
   border-bottom: 0.1rem solid #29b3a3;
+}
+
+.c6 {
+  display: block;
+  font-size: 1.4rem;
+  color: #030517;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: right;
+}
+
+.c6:hover,
+.c6:focus {
+  color: #0f1971;
 }
 
 <div
