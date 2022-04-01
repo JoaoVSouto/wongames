@@ -14,22 +14,30 @@ export type ButtonProps = {
   as?: React.ElementType
 } & ButtonTypes
 
-export const Button = ({
-  children,
-  icon,
-  size = 'medium',
-  fullWidth = false,
-  minimal = false,
-  ...rest
-}: ButtonProps) => (
-  <S.Wrapper
-    size={size}
-    fullWidth={fullWidth}
-    hasIcon={!!icon}
-    minimal={minimal}
-    {...rest}
-  >
-    {icon}
-    {children && <span>{children}</span>}
-  </S.Wrapper>
+export const Button = React.forwardRef<S.WrapperProps, ButtonProps>(
+  (
+    {
+      children,
+      icon,
+      size = 'medium',
+      fullWidth = false,
+      minimal = false,
+      ...rest
+    },
+    ref
+  ) => (
+    <S.Wrapper
+      size={size}
+      fullWidth={fullWidth}
+      hasIcon={!!icon}
+      minimal={minimal}
+      ref={ref}
+      {...rest}
+    >
+      {icon}
+      {children && <span>{children}</span>}
+    </S.Wrapper>
+  )
 )
+
+Button.displayName = 'Button'
