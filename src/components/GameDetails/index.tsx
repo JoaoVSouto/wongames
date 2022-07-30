@@ -13,6 +13,7 @@ type Rating = 'BR0' | 'BR10' | 'BR12' | 'BR14' | 'BR16' | 'BR18'
 export type GameDetailsProps = {
   developer: string
   releaseDate: string
+  publisher: string
   rating: Rating
   platforms: Platform[]
   genres: string[]
@@ -27,6 +28,7 @@ const platformIcons: Record<Platform, React.ReactNode> = {
 export const GameDetails = ({
   developer,
   releaseDate,
+  publisher,
   rating,
   platforms,
   genres
@@ -66,7 +68,7 @@ export const GameDetails = ({
 
       <S.Block>
         <S.Label>Publisher</S.Label>
-        <S.Description>2K</S.Description>
+        <S.Description>{publisher}</S.Description>
       </S.Block>
 
       <S.Block>

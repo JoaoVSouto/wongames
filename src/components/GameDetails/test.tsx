@@ -7,6 +7,7 @@ import { GameDetails, GameDetailsProps } from '.'
 const props: GameDetailsProps = {
   developer: 'Different Tales',
   platforms: ['windows', 'linux', 'mac'],
+  publisher: 'Walkabout',
   releaseDate: '2020-11-21T23:00:00',
   rating: 'BR0',
   genres: ['Role-playing', 'Narrative']
