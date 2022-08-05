@@ -10,8 +10,14 @@ export type SliderProps = {
   settings: SliderSettings
 }
 
-export const Slider = ({ children, settings }: SliderProps) => (
-  <S.Wrapper>
-    <SlickSlider {...settings}>{children}</SlickSlider>
-  </S.Wrapper>
+export const Slider = React.forwardRef<SlickSlider, SliderProps>(
+  ({ children, settings }, ref) => (
+    <S.Wrapper>
+      <SlickSlider ref={ref} {...settings}>
+        {children}
+      </SlickSlider>
+    </S.Wrapper>
+  )
 )
+
+Slider.displayName = 'Slider'
