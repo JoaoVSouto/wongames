@@ -4,6 +4,8 @@ import { Game, GameTemplateProps } from 'templates/Game'
 
 import { mock as galleryMock } from 'components/Gallery/mock'
 import { mock as gameDetailsMock } from 'components/GameDetails/mock'
+import { mock as gameCardSliderMock } from 'components/GameCardSlider/mock'
+import { mock as highlightMock } from 'components/Highlight/mock'
 
 export default function Index(props: GameTemplateProps) {
   return <Game {...props} />
@@ -47,7 +49,10 @@ export const getStaticProps: GetStaticProps = async () => {
       },
       gallery: galleryMock,
       description: descriptionHTML,
-      details: gameDetailsMock
+      details: gameDetailsMock,
+      upcomingGames: gameCardSliderMock,
+      upcomingHighlight: highlightMock,
+      recommendedGames: gameCardSliderMock
     }
   }
 }
